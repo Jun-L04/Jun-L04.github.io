@@ -4,20 +4,13 @@
 <head>
     <meta name="google-site-verification" content="dUtn4q5L2uW2aYRNow7mfqsfCkUY8EHVuF8xnm6yXas" />
     <meta charset="utf-8" />
-    <title>Immersive Solar System</title>
+    <title>test test test</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <a-scene>
-        <!-- This is a scaled model, 
-            sun's diameter is 10km, scaled down by 278400.0002
-            distanced scaled down by 13,920,000
-            scaled rotation speed, one earth day is 5 seconds
-
-        note to self: child entity's xyz is in presepctive to its parent
-          -->
         <a-assets>
             <audio id="interstellar"
                 src="https://cdn.glitch.com/390dbb2b-e5d3-4a00-aa75-431499e5f57c%2FInterstellar%20Main%20Theme%20-%20Extra%20Extended%20-%20Soundtrack%20by%20%20Hans%20Zimmer%20(128%20kbps).mp3?v=1604282448260"
@@ -35,51 +28,15 @@
         <a-sound id="background-sound" src="#interstellar" on="start" loop="true" volume="1" rollofffactor="0"
             sound="rolloffFactor: 0"></a-sound>
 
-        <!-- Inner Solar System -->
-        <!-- Note: 
-            the rotation mentioned in entity's sphere represents the axial tilt of the said star/planet/drawf
-            the rotation mentioned in entity's animation represents the orbital inclination of the said star/planet/drawf
-            the animaton in entity represents revolution while 
-              the animation in sphere represents rotation
-        -->
-        <a-entity id="solarSystemSun" position="0 0 -5" rotation="0 0 7.25" animation="property: rotation; from: 0 0 0; to: 0 360 0; easing: linear; 
+        <a-entity id="gitcoin" position="0 0 -5" rotation="0 0 7.25" animation="property: rotation; from: 0 0 0; to: 0 360 0; easing: linear; 
                            dir: forward; dur: 50000; loop: true;">
-            <a-sphere id="sun"
-                src="https://cdn.glitch.com/390dbb2b-e5d3-4a00-aa75-431499e5f57c%2F360SunCompressed.jpg?v=1609300193438"
+            <a-sphere id="le_coin"
+                src=".gitcoin.obj"
                 radius="5"></a-sphere>
             <!-- Direct link: https://www.nasa.gov/mission_pages/stereo/news/6th-anniversary.html -->
             <!-- Sun by: NASA -->
-
-            <a-entity id="mercuryPivot" position="4.16 0 -5" animation="property: rotation; from: 0 0 7.01; to: 0 360 7.01; easing: linear; 
-                            dir: forward; dur: 440000; loop: true;">
-                <a-sphere id="mercury"
-                    src="https://cdn.glitch.com/390dbb2b-e5d3-4a00-aa75-431499e5f57c%2F360mercuryCompressed.jpg?v=1609299891975"
-                    radius="0.017525" animation="property: rotation; from: 0 0 0.01; to: 0 360 0.01; easing: linear;
-                     dir: forward; dur: 293000; loop: true;"></a-sphere>
-                <!-- Direct link: https://commons.wikimedia.org/wiki/File:Enhanced_Color_Mercury_Map_%289312772919%29.jpg  -->
-                <!-- Mercury by: NASA -->
-            </a-entity>
-            <a-entity id="venusPivot" position="-7.77 0 -5" animation="property: rotation; from: 0 0 2.64; to: 0 360 2.64; easing: linear; 
-                             dir: forward; dur: 12150000; loop: true;">
-                <a-sphere id="venus" src="https://codehs.com/uploads/edf49264b6978d6a76010bab8f8a428d" radius="0.043463"
-                    animation="property: rotation; from: 0 0 177.4; to: 0 360 177.4; easing: linear;
-                     dir: forward; dur: 1215000; loop: true;"></a-sphere>
-                <!-- Direct link: https://pixabay.com/photos/map-venus-planet-lava-fire-hot-4818876/ -->
-                <!-- Venus by: MaxwellFury -->
-            </a-entity>
-
         </a-entity>
     </a-scene>
-
-    <script defer>
-        document.querySelector("#btn-start").onclick = () => {
-            document.querySelector("#start-screen").classList.add("hidden");
-            document.querySelector("#besucherzaehler2").classList.add("hidden");
-            document.querySelector("#profile").classList.add("hidden");
-            document.querySelector("#background-sound").emit("start");
-        };
-    </script>
-    <script src="https://button.glitch.me/button.js" defer></script>
 </body>
 
 </html>
