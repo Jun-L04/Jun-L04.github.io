@@ -1,0 +1,48 @@
+.on-top {
+    z-index: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fullscreen {
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+#besucherzaehler2 {
+    display: block;
+    place-content: baseline;
+    position: fixed;
+    z-index: 1;
+}
+
+#start-screen {
+    background-image: url("https://cdn.glitch.com/de7de6d4-10cf-447f-9468-8988184ced2d%2F1544289.png?v=1606355737854");
+    /* Source: https://wallpaperaccess.com/minimalist-rocket */
+    display: grid;
+    place-content: center;
+    background-size: cover;
+}
+
+#name {
+    color: White;
+    position: relative;
+    Bottom: 50px;
+}
+
+#btn-start {
+    color: orange;
+    position: relative;
+    top: 90px;
+}
+
+#reminder {
+    color: gray;
+    position: relative;
+    right: 650px;
+    top: 350px
+}
